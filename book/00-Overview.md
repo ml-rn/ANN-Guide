@@ -380,7 +380,7 @@
 - respects neuron cloud locations
 - can increase substrates via evolution
 
-## Advantages of HyperNEAT
+## Advantages of ES-HyperNEAT
 
 - exponential growth of neurons via time
 - geometry decides where to place neurons
