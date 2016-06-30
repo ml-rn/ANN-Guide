@@ -461,7 +461,7 @@
 				<li>CPPN usage (Compositional Pattern Producing NN)</li>
 				<li>Evolutionary algorithms generate neural network</li>
 				<li>Describes patterns of connectivity (called encoding)</li>
-				<li>Represents patterns like symmetry, repetition and variation of substrates</li>
+				<li>Describes patterns like symmetry, repetition and variation of substrates</li>
 			</ul>
 		</section>
 		<section>
@@ -476,6 +476,15 @@
 				<li>4D Hypercube (x1 , x2 , y1 , y2) for substrates</li>
 				<li>2D and 3D space is called a substrate</li>
 			</ul>
+		</section>
+		<section>
+			<h2>HyperNEAT Geometry</h2>
+			<ul>
+				<li>sees and predicts relations of inputs</li>
+			</ul>
+			<p>
+				<img src="/asset/hyperneat-geometry.png" alt="hyperneat-geometry">
+			</p>
 		</section>
 		<section>
 			<h2>Disadvantages of HyperNEAT</h2>
@@ -536,35 +545,44 @@
 		<section>
 			<h2>lychee.js CARTEL</h2>
 			<ul>
-				<li>botnet size (read: computers in the cloud) is above 500k+</li>
-				<li>each bot runs hundreds / thousands of agents in parallel</li>
-				<li>ES/HyperNEAT is really slow</li>
-				<li>RTES/HyperNEAT is pretty good, but still very static in inputs</li>
-				<li>Humans have no clue which inputs are relevant</li>
-				<li>Humans have no clue which training data is relevant</li>
+				<li>botnet size is above 500k+</li>
+				<li>each bot runs thousands of ES-HyperNEATs</li>
+				<li>RTES-HyperNEAT is good, but still static in inputs</li>
+			</ul>
+		</section>
+		<section>
+			<h2>lychee.js CARTEL</h2>
+			<ul>
+				<li>Humans have no clue about inputs</li>
+				<li>Humans have no clue about training data</li>
+				<li>Humans have no time for supervised learning</li>
 			</ul>
 		</section>
 		<section>
 			<h2>CARTEL/ES-HyperNEAT</h2>
 			<ul>
-				<li>you can basically forget all RNN solutions for code-analysis</li>
-				<li>ES-HyperNEAT is the closest to a problem where you have no clue</li>
-				<li>adaptive ANN required that learns which inputs play a role</li>
-				<li>adaptive ANN required that learns which training data plays a role</li>
-				<li>computation time in a botnet (peer-cloud) is very limited with ES/HyperNEAT</li>
-				<li>focus of the CARTEL is on performance, cache optimization and delegation</li>
+				<li>learns which inputs play a role</li>
+				<li>learns which training data plays a role</li>
+				<li>focus on performance, cache optimization</li>
+				<li>focus on delegation for synchronization</li>
 			</ul>
 		</section>
 		<section>
 			<h2>CARTEL/ES-HyperNEAT</h2>
 			<ul>
-				<li>Clone-Adaptive Real-Time Evolvable Legation / Evolvable-Substrate HyperNEAT</li>
+				<li>Clone-Adaptive Real-Time Evolvable Legation</li>
 				<li>adaptive to varying inputs</li>
-				<li>adaptive to legation (voted "minister" on each bot for botnet synchronization)</li>
-				<li>hashing of inputs/outputs with murmur hash (ultrafast non-crypto hashing)</li>
-				<li>delegating agent clones to do the same thing behind the scenes</li>
-				<li>proxying clones to increase fitness based on occurance</li>
+				<li>adaptive to legation (voted "minister" on each bot)</li>
+				<li>hashing of inputs/outputs with murmur</li>
+				<li>delegating agent clones to do same thing</li>
+				<li>using shadow clones to increase fitness</li>
 			</ul>
+		</section>
+		<section>
+			<h2>CARTEL/ES-HyperNEAT</h2>
+			<p>
+				<img src="/asset/cartel-hyperneat.png" alt="cartel-hyperneat">
+			</p>
 		</section>
 		<section>
 			<h2>CARTEL/ES-HyperNEAT</h2>
@@ -573,15 +591,16 @@
 				<li>agent clones can be targeted with opposite datasets</li>
 				<li>better variance for sigmoid behaviour</li>
 				<li>better variance for gaussian behaviour</li>
-				<li>sigmoid vs. gaussian still have to be evaluated (currently being evaluated)</li>
+				<li>sigmoid vs. gaussian still has to be evaluated</li>
 			</ul>
 		</section>
 		<section>
 			<h2>CARTEL/ES-HyperNEAT</h2>
 			<ul>
 				<li>Academic work still needs to be done</li>
-				<li>Reference implementation public around September 2016</li>
-				<li>needs some polishing work and well, much code decoupling to be not lychee.js centric</li>
+				<li>Reference implementation around Sept 2016</li>
+				<li>needs some polishing work</li>
+				<li>needs code decoupling from lychee.js Engine</li>
 				<li>Anybody want to write some papers and help?</li>
 			</ul>
 		</section>

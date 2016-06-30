@@ -339,7 +339,7 @@
 - CPPN usage (Compositional Pattern Producing NN)
 - Evolutionary algorithms generate neural network
 - Describes patterns of connectivity (called encoding)
-- Represents patterns like symmetry, repetition and variation of substrates
+- Describes patterns like symmetry, repetition and variation of substrates
 
 ## HyperNEAT
 
@@ -349,6 +349,12 @@
 
 - 4D Hypercube (x1 , x2 , y1 , y2) for substrates
 - 2D and 3D space is called a substrate
+
+## HyperNEAT Geometry
+
+- sees and predicts relations of inputs
+
+![hyperneat-geometry](/asset/hyperneat-geometry.png)
 
 ## Disadvantages of HyperNEAT
 
@@ -398,30 +404,35 @@
 
 ## lychee.js CARTEL
 
-- botnet size (read: computers in the cloud) is above 500k+
-- each bot runs hundreds / thousands of agents in parallel
-- ES/HyperNEAT is really slow
-- RTES/HyperNEAT is pretty good, but still very static in inputs
-- Humans have no clue which inputs are relevant
-- Humans have no clue which training data is relevant
+- botnet size is above 500k+
+- each bot runs thousands of ES-HyperNEATs
+- RTES-HyperNEAT is good, but still static in inputs
+
+## lychee.js CARTEL
+
+- Humans have no clue about inputs
+- Humans have no clue about training data
+- Humans have no time for supervised learning
 
 ## CARTEL/ES-HyperNEAT
 
-- you can basically forget all RNN solutions for code-analysis
-- ES-HyperNEAT is the closest to a problem where you have no clue
-- adaptive ANN required that learns which inputs play a role
-- adaptive ANN required that learns which training data plays a role
-- computation time in a botnet (peer-cloud) is very limited with ES/HyperNEAT
-- focus of the CARTEL is on performance, cache optimization and delegation
+- learns which inputs play a role
+- learns which training data plays a role
+- focus on performance, cache optimization
+- focus on delegation for synchronization
 
 ## CARTEL/ES-HyperNEAT
 
-- Clone-Adaptive Real-Time Evolvable Legation / Evolvable-Substrate HyperNEAT
+- Clone-Adaptive Real-Time Evolvable Legation
 - adaptive to varying inputs
-- adaptive to legation (voted "minister" on each bot for botnet synchronization)
-- hashing of inputs/outputs with murmur hash (ultrafast non-crypto hashing)
-- delegating agent clones to do the same thing behind the scenes
-- proxying clones to increase fitness based on occurance
+- adaptive to legation (voted "minister" on each bot)
+- hashing of inputs/outputs with murmur
+- delegating agent clones to do same thing
+- using shadow clones to increase fitness
+
+## CARTEL/ES-HyperNEAT
+
+![cartel-hyperneat](/asset/cartel-hyperneat.png)
 
 ## CARTEL/ES-HyperNEAT
 
@@ -429,13 +440,14 @@
 - agent clones can be targeted with opposite datasets
 - better variance for sigmoid behaviour
 - better variance for gaussian behaviour
-- sigmoid vs. gaussian still have to be evaluated (currently being evaluated)
+- sigmoid vs. gaussian still has to be evaluated
 
 ## CARTEL/ES-HyperNEAT
 
 - Academic work still needs to be done
-- Reference implementation public around September 2016
-- needs some polishing work and well, much code decoupling to be not lychee.js centric
+- Reference implementation around Sept 2016
+- needs some polishing work
+- needs code decoupling from lychee.js Engine
 - Anybody want to write some papers and help?
 
 
