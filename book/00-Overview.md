@@ -51,9 +51,11 @@
 ## Backpropagation
 
 - Idea: NNs will get better over time by rewards
-- is just a nested loop of two two-dimensional (layers and neurons) arrays
-- outer array is old set of neurons, inner array is new set of neurons
-- If `training_function(old_neuron.value) > 0.5`, update old neuron
+- is just a nested loop of two two-dimensional arrays
+- array's 1. dimension is layers (iterate over layers)
+- array's 2. dimension is neurons (iterate over neurons)
+- outer array is previous set of neurons, inner array is current set of neurons
+- If `training_function(current_neuron.value) > 0.5`, update previous neuron with value
 
 
 ## Neural Networks
@@ -205,7 +207,7 @@
 
 ## Disadvantages of RNN
 
-- It's super ineffective (computation time)
+- It's super ineffective (computation time gets longer with more datasets)
 - Each change in dataset vectors needs manual correction of reward function
 - Eventually RNNs will always lead to hacking the reward function
 - Mostly RNNs will end up with a single uber strategy
@@ -214,7 +216,8 @@
 
 - Long Short Term Memory RNNs
 - forget data and training that was irrelevant
-- do so by introducing forget gates
+- introduces new hidden layers per hidden layer
+- introduces forget gates
 
 ## LSTM RNN
 
@@ -234,17 +237,27 @@
 - bad for identifying new strategies
 - new strategies require combination of multiple RNNs (in line or a graph)
 
+
+= Deep Learning
+
+# Deep Learning
+
 ## Deep Learning
 
 - Combination of Neural Networks
-- Most companies use RNNs because they do picture or time-based data stuff anyways
-- Probability-based assumptions for determining results
-- focus on having many tiny (easy to compute) neural networks
-- tiny neural networks aim to exist one specified purpose
+- focus on having many tiny (easy to compute) NNs
+- tiny NNs aim to exist for one specified purpose
+- tiny NNs are connected to other neural networks
+- each NN's purpose has several inputs
 
 ## Deep Learning
 
 ![deep-learning](/asset/deep-learning.png)
+
+## Disadvantages of Deep Learning
+
+- Shitload of NNs and computation time
+- If used with RNNs complexity gets million-fold real fast
 
 
 = Adaptive Neural Networks

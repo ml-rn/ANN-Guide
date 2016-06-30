@@ -94,9 +94,11 @@
 			<h2>Backpropagation</h2>
 			<ul>
 				<li>Idea: NNs will get better over time by rewards</li>
-				<li>is just a nested loop of two two-dimensional (layers and neurons) arrays</li>
-				<li>outer array is old set of neurons, inner array is new set of neurons</li>
-				<li>If <code>training_function(old_neuron.value)</code>  > <code>0.5</code> , update old neuron</li>
+				<li>is just a nested loop of two two-dimensional arrays</li>
+				<li>array's 1. dimension is layers (iterate over layers)</li>
+				<li>array's 2. dimension is neurons (iterate over neurons)</li>
+				<li>outer array is previous set of neurons, inner array is current set of neurons</li>
+				<li>If <code>training_function(current_neuron.value)</code>  > <code>0.5</code> , update previous neuron with value</li>
 			</ul>
 		</section>
 		<section>
@@ -292,7 +294,7 @@
 		<section>
 			<h2>Disadvantages of RNN</h2>
 			<ul>
-				<li>It's super ineffective (computation time)</li>
+				<li>It's super ineffective (computation time gets longer with more datasets)</li>
 				<li>Each change in dataset vectors needs manual correction of reward function</li>
 				<li>Eventually RNNs will always lead to hacking the reward function</li>
 				<li>Mostly RNNs will end up with a single uber strategy</li>
@@ -303,7 +305,8 @@
 			<ul>
 				<li>Long Short Term Memory RNNs</li>
 				<li>forget data and training that was irrelevant</li>
-				<li>do so by introducing forget gates</li>
+				<li>introduces new hidden layers per hidden layer</li>
+				<li>introduces forget gates</li>
 			</ul>
 		</section>
 		<section>
@@ -330,14 +333,18 @@
 				<li>new strategies require combination of multiple RNNs (in line or a graph)</li>
 			</ul>
 		</section>
+	</section>
+	<section>
+		<section>
+			<h1>Deep Learning</h1>
+		</section>
 		<section>
 			<h2>Deep Learning</h2>
 			<ul>
 				<li>Combination of Neural Networks</li>
-				<li>Most companies use RNNs because they do picture or time-based data stuff anyways</li>
-				<li>Probability-based assumptions for determining results</li>
-				<li>focus on having many tiny (easy to compute) neural networks</li>
-				<li>tiny neural networks aim to exist one specified purpose</li>
+				<li>focus on having many tiny (easy to compute) NNs</li>
+				<li>tiny NNs aim to exist for one specified purpose</li>
+				<li>tiny NNs are connected to other neural networks</li>
 			</ul>
 		</section>
 		<section>
