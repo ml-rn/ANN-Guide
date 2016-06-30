@@ -294,6 +294,7 @@
 ## NEAT
 
 - Neuro Evolution of Augmenting Topologies
+- uses CPPN (Composition Pattern Producing Network)
 - genetic algorithm that generates ANNs
 - finds best fitness of evolved solutions
 - starts minimally and predicts maximum efficiency in growth
@@ -309,10 +310,6 @@
 - can predict where to spawn neurons
 - respects diversity by gene history markers
 - tracks history, crossover techniques, speciation
-
-## NEAT History
-
-![neat-history](/asset/neat-history.png)
 
 ## NEAT Agents
 
@@ -346,12 +343,16 @@
 
 ## HyperNEAT
 
+![hyperneat](/asset/hyperneat.png)
+
+## HyperNEAT
+
 - 4D Hypercube (x1 , x2 , y1 , y2) for substrates
 - 2D and 3D space is called a substrate
 
 ## Disadvantages of HyperNEAT
 
-- Basically a shitload of neuron data
+- Basically a shitload of necessary pattern data
 
 ## Advantages of HyperNEAT
 
