@@ -256,8 +256,9 @@
 
 ## Disadvantages of Deep Learning
 
-- Shitload of NNs and computation time
-- If used with RNNs complexity gets million-fold real fast
+- shitload of NNs and computation time
+- literally only feasable in a server cloud
+- if used with RNNs complexity gets million-fold real fast
 
 
 = Adaptive Neural Networks
@@ -266,14 +267,24 @@
 
 ## Adaptive Neural Networks
 
+- randomly creates connections between neurons
+- randomly removes connections between neurons
+
+
+## Adaptive NNs
+
 ![adaptive-nn](/asset/adaptive-nn.png)
 
-## Disadvantages of Adaptive Neural Networks
+## Advantages of ANNs
 
-- Randomization always wins
-- Always better than RNNs without manual influence
-- Unsupervised learning effect
-- Lower efficiency than Evolution (parallelization) concepts
+- randomization always wins
+- always better than RNNs without manual influence
+- unsupervised learning is possible
+
+## Disadvantages of ANNs
+
+- cross-talk of neurons can get worse
+- lower efficiency than Evolution (parallelization) concepts
 
 
 = NEAT
@@ -282,21 +293,35 @@
 
 ## NEAT
 
-- Neuroevolution of augmenting topologies
+- Neuro Evolution of Augmenting Topologies
 - genetic algorithm that generates ANNs
 - finds best fitness of evolved solutions
-- respects diversity by tracking genes with history markes
-- can predict what genes will be dominant in future
-- can predict dominant species in future
-- tracks history, crossover techniques, speciation
+- starts minimally and predicts maximum efficiency in growth
 
 ## NEAT
 
+![neat](/asset/neat.png)
+
+## NEAT History
+
+- can predict dominant genes
+- can predict dominant species
+- can predict where to spawn neurons
+- respects diversity by gene history markers
+- tracks history, crossover techniques, speciation
+
+## NEAT History
+
+![neat-history](/asset/neat-history.png)
+
+## NEAT Agents
+
 - typical NEAT implementation has agents
 - best agents get to make babies based on their fitness
-- starts minimally and predicts maximum efficiency in growth
-- can predict where to spawn neurons to get more effective
-- only problem is unwanted cross-talk between near-end neurons
+
+## NEAT Agents
+
+![neat-agents](/asset/neat-agents.png)
 
 ## Advantages of NEAT
 
@@ -330,7 +355,7 @@
 
 ## Advantages of HyperNEAT
 
-- Aweomse prediction of geometric relations
+- Awesome prediction of geometric relations
 - Can see if sensors (inputs) are related to each other
 - does not require adaption of reward function
 - does not exploit reward function

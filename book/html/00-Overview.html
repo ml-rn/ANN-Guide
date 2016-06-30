@@ -345,6 +345,7 @@
 				<li>focus on having many tiny (easy to compute) NNs</li>
 				<li>tiny NNs aim to exist for one specified purpose</li>
 				<li>tiny NNs are connected to other neural networks</li>
+				<li>each NN's purpose has several inputs</li>
 			</ul>
 		</section>
 		<section>
@@ -353,6 +354,14 @@
 				<img src="/asset/deep-learning.png" alt="deep-learning">
 			</p>
 		</section>
+		<section>
+			<h2>Disadvantages of Deep Learning</h2>
+			<ul>
+				<li>shitload of NNs and computation time</li>
+				<li>literally only feasable in a server cloud</li>
+				<li>if used with RNNs complexity gets million-fold real fast</li>
+			</ul>
+		</section>
 	</section>
 	<section>
 		<section>
@@ -360,17 +369,30 @@
 		</section>
 		<section>
 			<h2>Adaptive Neural Networks</h2>
+			<ul>
+				<li>randomly creates connections between neurons</li>
+				<li>randomly removes connections between neurons</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Adaptive NNs</h2>
 			<p>
 				<img src="/asset/adaptive-nn.png" alt="adaptive-nn">
 			</p>
 		</section>
 		<section>
-			<h2>Disadvantages of Adaptive Neural Networks</h2>
+			<h2>Advantages of ANNs</h2>
 			<ul>
-				<li>Randomization always wins</li>
-				<li>Always better than RNNs without manual influence</li>
-				<li>Unsupervised learning effect</li>
-				<li>Lower efficiency than Evolution (parallelization) concepts</li>
+				<li>randomization always wins</li>
+				<li>always better than RNNs without manual influence</li>
+				<li>unsupervised learning is possible</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Disadvantages of ANNs</h2>
+			<ul>
+				<li>cross-talk of neurons can get worse</li>
+				<li>lower efficiency than Evolution (parallelization) concepts</li>
 			</ul>
 		</section>
 	</section>
@@ -381,24 +403,46 @@
 		<section>
 			<h2>NEAT</h2>
 			<ul>
-				<li>Neuroevolution of augmenting topologies</li>
+				<li>Neuro Evolution of Augmenting Topologies</li>
 				<li>genetic algorithm that generates ANNs</li>
 				<li>finds best fitness of evolved solutions</li>
-				<li>respects diversity by tracking genes with history markes</li>
-				<li>can predict what genes will be dominant in future</li>
-				<li>can predict dominant species in future</li>
-				<li>tracks history, crossover techniques, speciation</li>
+				<li>starts minimally and predicts maximum efficiency in growth</li>
 			</ul>
 		</section>
 		<section>
 			<h2>NEAT</h2>
+			<p>
+				<img src="/asset/neat.png" alt="neat">
+			</p>
+		</section>
+		<section>
+			<h2>NEAT History</h2>
+			<ul>
+				<li>can predict dominant genes</li>
+				<li>can predict dominant species</li>
+				<li>can predict where to spawn neurons</li>
+				<li>respects diversity by gene history markers</li>
+				<li>tracks history, crossover techniques, speciation</li>
+			</ul>
+		</section>
+		<section>
+			<h2>NEAT History</h2>
+			<p>
+				<img src="/asset/neat-history.png" alt="neat-history">
+			</p>
+		</section>
+		<section>
+			<h2>NEAT Agents</h2>
 			<ul>
 				<li>typical NEAT implementation has agents</li>
 				<li>best agents get to make babies based on their fitness</li>
-				<li>starts minimally and predicts maximum efficiency in growth</li>
-				<li>can predict where to spawn neurons to get more effective</li>
-				<li>only problem is unwanted cross-talk between near-end neurons</li>
 			</ul>
+		</section>
+		<section>
+			<h2>NEAT Agents</h2>
+			<p>
+				<img src="/asset/neat-agents.png" alt="neat-agents">
+			</p>
 		</section>
 		<section>
 			<h2>Advantages of NEAT</h2>
@@ -441,7 +485,7 @@
 		<section>
 			<h2>Advantages of HyperNEAT</h2>
 			<ul>
-				<li>Aweomse prediction of geometric relations</li>
+				<li>Awesome prediction of geometric relations</li>
 				<li>Can see if sensors (inputs) are related to each other</li>
 				<li>does not require adaption of reward function</li>
 				<li>does not exploit reward function</li>
