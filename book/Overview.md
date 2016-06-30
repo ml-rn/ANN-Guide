@@ -45,7 +45,7 @@
 
 - How does a Neural Network look like?
 
-![neural-network](neural-network.png)
+![neural-network](/asset/neural-network.png)
 
 ## Backpropagation
 
@@ -60,7 +60,7 @@
 
 ## Example Neural Network Usage
 
-![neural-network-usage](neural-network-usage.png)
+![neural-network-usage](/asset/neural-network-usage.png)
 
 
 ## Problems with Neural Networks
@@ -81,7 +81,7 @@
 
 ## Problems with Classification
 
-![classification-problem](classification-problem.png)
+![classification-problem](/asset/classification-problem.png)
 
 
 ## Problems with Classification
@@ -114,7 +114,7 @@
 - 2 babies are produced, a son and a daughter
 - 2 babies have more of mothers or fathers genes
 
-![genome-nn](genome-nn.png)
+![genome-nn](/asset/genome-nn.png)
 
 # Evolution Cycles
 
@@ -143,7 +143,7 @@
 
 - The treatment / reward function is typically sigmoid or gaussian
 
-![sigmoid-gaussian](sigmoid-gaussian.png)
+![sigmoid-gaussian](/asset/sigmoid-gaussian.png)
 
 ## Backpropagation
 
@@ -152,7 +152,7 @@
 
 ## Problems with Backpropagation
 
-![problems-backpropagation](problems-backpropagation.png)
+![problems-backpropagation](/asset/problems-backpropagation.png)
 
 
 = Recurrent Neural Networks
@@ -161,4 +161,209 @@
 
 ## Recurrent Neural Networks
 
+- so-called unfolding neural networks
+- hidden layers will unfold in another dimension
+- unfolding leads to sense of time/occurance
+
+## Problems with Neural Networks
+
+- It's super ineffective (computation time)
+- Each change in dataset vectors needs manual correction of reward function
+- Eventually RNNs will always lead to hacking the reward function
+- Mostly RNNs will end up with a single uber strategy
+
+## LSTM Recurrent Neural Networks
+
+- Long Short Term Memory RNNs
+- forget data and training that was irrelevant
+- do so by introducing forget gates
+
+## LSTM RNN
+
+![lstm-rnn](/asset/lstm-rnn.png)
+
+## LSTM RNN
+
+- values close to zero (neuron output) are ignored
+- good at identifying positive values
+- very bad at identifying negative values
+
+## Problems with LSTM RNN
+
+- very good at reoccuring datasets
+- basically the computer variant of captain obvious
+- bad for identifying new strategies
+- new strategies require combination of multiple RNNs (in line or a graph)
+
+## Deep Learning
+
+- Combination of Neural Networks
+- Most companies use RNNs because they do picture or time-based data stuff anyways
+- Probability-based assumptions for determining results
+- focus on having many tiny (easy to compute) neural networks
+- tiny neural networks aim to exist one specified purpose
+
+## Deep Learning
+
+![deep-learning](/asset/deep-learning.png)
+
+
+= Adaptive Neural Networks
+
+# Adaptive Neural Networks
+
+## Adaptive Neural Networks
+
+![adaptive-nn](/asset/adaptive-nn.png)
+
+## Problems with Adaptive Neural Networks
+
+- Randomization always wins
+- Always better than RNNs without manual influence
+- Unsupervised learning effect
+- Lower efficiency than Evolution (parallelization) concepts
+
+
+= NEAT
+
+# NEAT
+
+## NEAT
+
+- Neuroevolution of augmenting topologies
+- genetic algorithm that generates ANNs
+- finds best fitness of evolved solutions
+- respects diversity by tracking genes with history markes
+- can predict what genes will be dominant in future
+- can predict dominant species in future
+- tracks history, crossover techniques, speciation
+
+## NEAT
+
+- typical NEAT implementation has agents
+- best agents get to make babies based on their fitness
+- starts minimally and predicts maximum efficiency in growth
+- can predict where to spawn neurons to get more effective
+- only problem is unwanted cross-talk between near-end neurons
+
+## Problems with NEAT
+
+- Adaptive to anything
+- Figures out anything itself, given enough time
+- Mutates connections between neurons (so-called substrates)
+- Mutates nodes (neurons) in locations
+- history markers are awesome for prediction
+
+
+= HyperNEAT
+
+# HyperNEAT
+
+## HyperNEAT
+
+- Hypercube based encoding for NEAT
+- CPPN usage (Compositional Pattern Producing NN)
+- Evolutionary algorithms generate neural network
+- Describes patterns of connectivity (called encoding)
+- Represents patterns like symmetry, repetition and variation of substrates
+
+## HyperNEAT
+
+- 4D Hypercube (x1 , x2 , y1 , y2) for substrates
+- 2D and 3D space is called a substrate
+
+## Problems with HyperNEAT
+
+- Basically a shitload of neurons
+- Aweomse prediction of geometric relations
+- Can see if sensors (inputs) are related to each other
+- does not require adaption of reward function
+- does not exploit reward function
+
+
+= ES-HyperNEAT
+
+# ES-HyperNEAT
+
+## ES-HyperNEAT
+
+- Evolvable substrate HyperNEAT
+- places connections (substrates) automatically
+- respects neuron cloud density
+- respects neuron cloud locations
+- can increase substrates via evolution
+
+## Problems with HyperNEAT
+
+- exponential growth of neurons via time
+- geometry decides where to place neurons
+
+
+= RTES-HyperNEAT
+
+# RTES-HyperNEAT
+
+## RTES-HyperNEAT
+
+- Multi-agent implementation of ES-HyperNEAT
+- made for realtime (RT) usage
+- uses limited epoches for dominance of agents
+- best agents produce babies based on fitness
+
+
+= lychee.js CARTEL
+
+# lychee.js CARTEL
+
+## lychee.js CARTEL
+
+- botnet size (read: computers in the cloud) is above 500k+
+- each bot runs hundreds / thousands of agents in parallel
+- ES/HyperNEAT is really slow
+- RTES/HyperNEAT is pretty good, but still very static in inputs
+- Humans have no clue which inputs are relevant
+- Humans have no clue which training data is relevant
+
+## CARTEL/ES-HyperNEAT
+
+- you can basically forget all RNN solutions for code-analysis
+- ES-HyperNEAT is the closest to a problem where you have no clue
+- adaptive ANN required that learns which inputs play a role
+- adaptive ANN required that learns which training data plays a role
+- computation time in a botnet (peer-cloud) is very limited with ES/HyperNEAT
+- focus of the CARTEL is on performance, cache optimization and delegation
+
+## CARTEL/ES-HyperNEAT
+
+- Clone-Adaptive Real-Time Evolvable Legation / Evolvable-Substrate HyperNEAT
+- adaptive to varying inputs
+- adaptive to legation (voted "minister" for botnet synchronization)
+- hashing of inputs/outputs with murmur hash (ultrafast non-crypto hashing)
+- delegating clones to do the same thing behind the scenes ("proxying" them and increasing fitness based on occurance)
+- decides when randomization is good for evolution
+
+## CARTEL/ES-HyperNEAT
+
+- clones can be targeted with opposite datasets
+- better variance for sigmoid behaviour
+- better variance for gaussian behaviour
+- sigmoid vs. gaussian still have to be evaluated (currently being evaluated)
+
+## CARTEL/ES-HyperNEAT
+
+- Academic work still needs to be done
+- Reference implementation public around September 2016
+- needs some polishing work and well, much code decoupling to be not lychee.js centric
+- Anybody want to write some papers and help?
+
+
+= Summary
+
+# Summary
+
+## Summary
+
+- github.com/cookiengineer/ANN-Guide (this talk)
+- github.com/Artificial-Engineering/lycheejs (reference implementation)
+- github.com/Artificial-Engineering/lycheejs-cartel (zero content by now)
 
