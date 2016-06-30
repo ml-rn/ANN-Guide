@@ -359,7 +359,7 @@
 - Awesome prediction of geometric relations
 - Can see if sensors (inputs) are related to each other
 - does not require adaption of reward function
-- does not exploit reward function
+- does not exploit reward function due to patterns
 
 
 = ES-HyperNEAT
