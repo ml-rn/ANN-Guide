@@ -7,8 +7,8 @@
 
 - What is Machine Learning?
 - What is Deep Learning?
-- Different Architectures
-- Biology vs. Evolution vs. AI
+- Different Architectures of NNs
+- Why ANNs are so awesome
 
 
 ## What is Machine Learning
@@ -18,16 +18,17 @@
 - Teaching a Machine to describe problems itself
 - Teaching a Machine to solve problems itself
 
+## What should it do?
+
+- Problem -> Machine Learning -> Solution
+- Dataset -> Classification -> Yes/No to a question
+- Dataset -> Analysis -> Yes/No to a question
+
 ## Architectures
 
 - Math sector: NN, ENN, RNN, CNN, Q-RNN
-- Biology sector: HTM engine
+- Biology sector: HTM engine (not covered here)
 - Engineering sector: ANN, NEAT, HyperNEAT, ES/HyperNEAT
-
-## What does ML do?
-
-- Problem -> ML -> Solution
-- Dataset -> Classification -> Yes/No to a question
 
 
 = Neural Networks
@@ -38,8 +39,8 @@
 
 - Idea to build a human brain
 - can figure things out on their own (in a limited way)
-- reward ("good dog!")
-- punish ("bad dog!")
+- reward ("good dog!") to identify good things (yes)
+- punish ("bad dog!") to identify bad things (no)
 
 ## Neural Networks
 
@@ -49,14 +50,20 @@
 
 ## Backpropagation
 
-- When being rewarded, NNs will get better over time.
-- Backpropagation is just a nested loop. If function is > 0.5, add value to outer Array
+- Idea: NNs will get better over time by rewards
+- is just a nested loop of two two-dimensional (layers and neurons) arrays
+- outer array is old set of neurons, inner array is new set of neurons
+- If `training_function(old_neuron.value) > 0.5`, update old neuron
 
 
 ## Neural Networks
 
-- can only work with Vector input (0.0 - 1.0)
-- are totally dumb, but don't question treatment or punishment
+- can only work with vectors (0.0 - 1.0)
+- don't question treatment or punishment
+- don't question datasets
+- don't question input vectors
+- don't question output vectors
+
 
 ## Example Neural Network Usage
 
@@ -67,7 +74,7 @@
 
 - used as so-called Classifier
 - Dataset for cars has 4 vectors (4 wheels) as inputs
-- [0,1,1,1] or whatever...
+- [1,1,0,1] or whatever data representation
 - NN gets treatment if found broken car (assuming broken occurs less than working cars)
 
 ## Neural Networks
@@ -75,9 +82,10 @@
 - can be seen as dumb Monkeys wanting a banana
 - don't question their reward
 - don't have a sense of time
-- only know good/bad, no matter how long last time was ago
+- only know good/bad, no matter how long the timespan
 - overfitting problem
-- first 1000 cars are good means every car is good. Want banana now.
+- first 1000 cars are good means every car is good.
+- Want banana now.
 
 ## Problems with Classification
 
@@ -86,16 +94,17 @@
 
 ## Problems with Classification
 
-- Dataset was not finite anymore (6 wheels more than 4 wheels)
-- Let's assume 5000 (insert big number here) 4 wheel cars
-- Let's assume 10 6 wheel cars
+- Datasets can be not finite anymore
+- Let's assume 5000 (insert big number here) 4 wheel cars and 10 cars were 6 wheel cars
 - [1,1,1,1,1,1] is a good car
-- [1,1,1,1,0,0] is a bad car (last 2 vectors were not tracked)
+- [1,1,1,1,0,0] is a also good car (last 2 vectors not tracked)
 
-## Problems with Infinite/Changing Datasets
+## Problems with Changing Datasets
 
 - How to adapt to classifications?
 - How to adapt to new dataset vectors?
+- How to adapt to minimally occuring marginal conditions?
+
 
 = Evolution Cycles
 
@@ -110,25 +119,31 @@
 
 ## Evolution Cycles
 
+![genome-nn-weights](/asset/genome-nn-weights.png)
+
+## Evolution Cycles
+
 - Genome DNA split is randomized
 - 2 babies are produced, a son and a daughter
-- 2 babies have more of mothers or fathers genes
+- 2 babies have each more of mothers or fathers genes
+
+## Evolution Cycles
 
 ![genome-nn](/asset/genome-nn.png)
 
-# Evolution Cycles
+## Evolution Cycles
 
 - Evolution always wins
 - Randomization always wins
 
-## Problems with Evolution Cycles
+## Disadvantages of Evolution Cycles
 
 - Adaptive to "bad seasons" (depressive behaviour)
 - Adaptive to "good seasons" (optimistic behaviour)
 - Needs long time to get better
 - Needs parallelization of hundreds of agents
 
-## Good things with Evolution Cycles
+## Advantages of Evolution Cycles
 
 - Eventually will always come up with correct classifier
 - Adaptive to infinite datasets
@@ -152,7 +167,19 @@
 
 ## Problems with Backpropagation
 
-![problems-backpropagation](/asset/problems-backpropagation.png)
+![backpropagation-vector-problem](/asset/backpropagation-vector-problem.png)
+
+## Problems with Backpropagation
+
+![backpropagation-input-problem](/asset/backpropagation-input-problem.png)
+
+## Problems with Backpropagation
+
+- input vectors influence reward function
+- time and occurance problem
+- 6 wheels occur less than 4 wheels, but still a car
+- new reward function necessary for bigger set of inputs
+- how to value different rewards for different inputs?
 
 
 = Recurrent Neural Networks
@@ -165,7 +192,7 @@
 - hidden layers will unfold in another dimension
 - unfolding leads to sense of time/occurance
 
-## Problems with Neural Networks
+## Disadvantages of Recurrent Neural Networks
 
 - It's super ineffective (computation time)
 - Each change in dataset vectors needs manual correction of reward function
@@ -188,7 +215,7 @@
 - good at identifying positive values
 - very bad at identifying negative values
 
-## Problems with LSTM RNN
+## Disadvantages of LSTM RNN
 
 - very good at reoccuring datasets
 - basically the computer variant of captain obvious
@@ -216,7 +243,7 @@
 
 ![adaptive-nn](/asset/adaptive-nn.png)
 
-## Problems with Adaptive Neural Networks
+## Disadvantages of Adaptive Neural Networks
 
 - Randomization always wins
 - Always better than RNNs without manual influence
@@ -246,7 +273,7 @@
 - can predict where to spawn neurons to get more effective
 - only problem is unwanted cross-talk between near-end neurons
 
-## Problems with NEAT
+## Advantages of NEAT
 
 - Adaptive to anything
 - Figures out anything itself, given enough time
@@ -272,9 +299,12 @@
 - 4D Hypercube (x1 , x2 , y1 , y2) for substrates
 - 2D and 3D space is called a substrate
 
-## Problems with HyperNEAT
+## Disadvantages of HyperNEAT
 
-- Basically a shitload of neurons
+- Basically a shitload of neuron data
+
+## Advantages of HyperNEAT
+
 - Aweomse prediction of geometric relations
 - Can see if sensors (inputs) are related to each other
 - does not require adaption of reward function
@@ -293,7 +323,7 @@
 - respects neuron cloud locations
 - can increase substrates via evolution
 
-## Problems with HyperNEAT
+## Advantages of HyperNEAT
 
 - exponential growth of neurons via time
 - geometry decides where to place neurons
@@ -337,14 +367,15 @@
 
 - Clone-Adaptive Real-Time Evolvable Legation / Evolvable-Substrate HyperNEAT
 - adaptive to varying inputs
-- adaptive to legation (voted "minister" for botnet synchronization)
+- adaptive to legation (voted "minister" on each bot for botnet synchronization)
 - hashing of inputs/outputs with murmur hash (ultrafast non-crypto hashing)
-- delegating clones to do the same thing behind the scenes ("proxying" them and increasing fitness based on occurance)
-- decides when randomization is good for evolution
+- delegating agent clones to do the same thing behind the scenes
+- proxying clones to increase fitness based on occurance
 
 ## CARTEL/ES-HyperNEAT
 
-- clones can be targeted with opposite datasets
+- decides when randomization is good for evolution
+- agent clones can be targeted with opposite datasets
 - better variance for sigmoid behaviour
 - better variance for gaussian behaviour
 - sigmoid vs. gaussian still have to be evaluated (currently being evaluated)
@@ -365,5 +396,5 @@
 
 - github.com/cookiengineer/ANN-Guide (this talk)
 - github.com/Artificial-Engineering/lycheejs (reference implementation)
-- github.com/Artificial-Engineering/lycheejs-cartel (zero content by now)
+- github.com/Artificial-Engineering/lycheejs-cartel (academic stuff, zero content by now)
 
