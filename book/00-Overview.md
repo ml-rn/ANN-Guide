@@ -156,9 +156,16 @@
 
 ## Backpropagation
 
-- The treatment / reward function is typically sigmoid or gaussian
+- outer last-hidden-layer-update function
+- typically sigmoid or gaussian (depending on use case)
 
-![sigmoid-gaussian](/asset/sigmoid-gaussian.png)
+## Backpropagation
+
+![backpropagation-sigmoid](/asset/backpropagation-sigmoid.png)
+
+## Backpropagation
+
+![backpropagation-gaussian](/asset/backpropagation-gaussian.png)
 
 ## Backpropagation
 
@@ -192,14 +199,18 @@
 - hidden layers will unfold in another dimension
 - unfolding leads to sense of time/occurance
 
-## Disadvantages of Recurrent Neural Networks
+## Recurrent Neural Networks
+
+![recurrent-nn](/asset/recurrent-nn.png)
+
+## Disadvantages of RNN
 
 - It's super ineffective (computation time)
 - Each change in dataset vectors needs manual correction of reward function
 - Eventually RNNs will always lead to hacking the reward function
 - Mostly RNNs will end up with a single uber strategy
 
-## LSTM Recurrent Neural Networks
+## LSTM Recurrent Neural Network
 
 - Long Short Term Memory RNNs
 - forget data and training that was irrelevant
@@ -211,6 +222,7 @@
 
 ## LSTM RNN
 
+- additional so called forget gates
 - values close to zero (neuron output) are ignored
 - good at identifying positive values
 - very bad at identifying negative values

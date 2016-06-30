@@ -225,10 +225,20 @@
 		<section>
 			<h2>Backpropagation</h2>
 			<ul>
-				<li>The treatment / reward function is typically sigmoid or gaussian</li>
+				<li>outer last-hidden-layer-update function</li>
+				<li>typically sigmoid or gaussian (depending on use case)</li>
 			</ul>
+		</section>
+		<section>
+			<h2>Backpropagation</h2>
 			<p>
-				<img src="/asset/sigmoid-gaussian.png" alt="sigmoid-gaussian">
+				<img src="/asset/backpropagation-sigmoid.png" alt="backpropagation-sigmoid">
+			</p>
+		</section>
+		<section>
+			<h2>Backpropagation</h2>
+			<p>
+				<img src="/asset/backpropagation-gaussian.png" alt="backpropagation-gaussian">
 			</p>
 		</section>
 		<section>
@@ -274,7 +284,13 @@
 			</ul>
 		</section>
 		<section>
-			<h2>Disadvantages of Recurrent Neural Networks</h2>
+			<h2>Recurrent Neural Networks</h2>
+			<p>
+				<img src="/asset/recurrent-nn.png" alt="recurrent-nn">
+			</p>
+		</section>
+		<section>
+			<h2>Disadvantages of RNN</h2>
 			<ul>
 				<li>It's super ineffective (computation time)</li>
 				<li>Each change in dataset vectors needs manual correction of reward function</li>
@@ -283,7 +299,7 @@
 			</ul>
 		</section>
 		<section>
-			<h2>LSTM Recurrent Neural Networks</h2>
+			<h2>LSTM Recurrent Neural Network</h2>
 			<ul>
 				<li>Long Short Term Memory RNNs</li>
 				<li>forget data and training that was irrelevant</li>
@@ -299,6 +315,7 @@
 		<section>
 			<h2>LSTM RNN</h2>
 			<ul>
+				<li>additional so called forget gates</li>
 				<li>values close to zero (neuron output) are ignored</li>
 				<li>good at identifying positive values</li>
 				<li>very bad at identifying negative values</li>
