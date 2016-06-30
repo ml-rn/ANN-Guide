@@ -425,7 +425,7 @@
 
 - Clone-Adaptive Real-Time Evolvable Legation
 - adaptive to varying inputs
-- adaptive to legation (voted "minister" on each bot)
+- adaptive to legation (voted "don" on each bot)
 - hashing of inputs/outputs with murmur
 - delegating agent clones to do same thing
 - using shadow clones to increase fitness
